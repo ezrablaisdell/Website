@@ -7,8 +7,8 @@
   <title>Out of the Deep — A Prayer of Creation</title>
   <meta name="description" content="An original prayer in three movements: creation, exile, and mercy. A quiet encounter with the cosmos and the God who made it.">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./universe.js" defer></script>
+  <link rel="stylesheet" href="./styles.css?v=motion-2">
+  <script src="./universe.js?v=motion-2" defer></script>
 </head>
 <body>
   <a class="skip" href="#prayer">Skip to the prayer</a>
@@ -21,7 +21,7 @@
   <main id="prayer">
     <section class="creation movement" id="beginning" aria-labelledby="title">
       <div class="cosmic-art" role="img" aria-label="Copper and blue filaments of cosmic dust circling a dark, silent void."></div>
-      <canvas id="field" aria-hidden="true"></canvas>
+      <canvas id="field" class="particle-field" aria-hidden="true"></canvas>
       <div class="hero-grid" aria-hidden="true"><span class="cross cross-one">+</span><span class="cross cross-two">+</span><span class="axis-label">THE DEEP / תְּהוֹם</span><span class="orbit-label">FORM ARISING FROM THE FORMLESS</span></div>
       <div class="hero-content">
         <p class="eyebrow"><span class="index">I</span> CREATION</p>
@@ -69,7 +69,7 @@
     </section>
 
     <section class="mercy movement" id="mercy" aria-labelledby="mercy-title">
-      <div class="mercy-art" aria-hidden="true"></div>
+      <div class="mercy-art" aria-hidden="true"></div><canvas id="mercy-field" class="particle-field" aria-hidden="true"></canvas>
       <div class="mercy-line" aria-hidden="true"></div>
       <p class="eyebrow"><span class="index">III</span> MERCY</p>
       <h2 id="mercy-title">Remember<br><em>the dust.</em></h2>
@@ -84,4 +84,5 @@
   <footer><span class="footer-title">OUT OF THE DEEP</span><span>An original prayer, after Genesis, Exodus &amp; the Psalms.</span><a href="#beginning">RETURN TO THE BEGINNING <span aria-hidden="true">↑</span></a></footer>
 </body>
 </html>
+
 

@@ -11,6 +11,39 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:30px;pa
 @media(min-width:1600px){.hero-content{padding-left:12%}.creation{min-height:1000px}.exile{padding-left:12%;padding-right:12%}}
 @media(max-width:900px){.masthead-note{display:none}.creation{min-height:900px}.hero-content{padding-left:7%;padding-right:5%;padding-top:155px}.cosmic-art{background-position:60% center;opacity:.8}.creation:after{background:linear-gradient(90deg,#08090bdd,#08090b66 60%,transparent),linear-gradient(0deg,var(--ink),transparent 38%)}.exile{padding:45px 7% 80px}.exile-grid{gap:3%}.poem{font-size:1.17rem}.hero-grid .orbit-label{display:none}.figure-no{display:none}.hero-bottom{left:7%;right:7%}.field-diagram figcaption{font-size:.75rem}.exile-copy h2{font-size:4rem}footer{flex-wrap:wrap;justify-content:center;text-align:center}}
 @media(max-width:620px){.masthead{padding:24px 6%;font-size:.75rem}.sigil{font-size:25px}.motion-control{font-size:.75rem}.creation{min-height:820px;min-height:max(820px,100svh);align-items:flex-start}.hero-content{padding-top:155px;padding-bottom:160px;max-width:100%}h1{font-size:clamp(4.75rem,18vw,7rem)}.eyebrow{margin-bottom:28px;font-size:.75rem}.poem{font-size:clamp(1rem,4.15vw,1.22rem);line-height:1.95}.first-stanza{margin-top:35px}.cosmic-art{background-position:59% center;opacity:.68}.creation:after{background:linear-gradient(90deg,#08090bed,#08090b66),linear-gradient(0deg,var(--ink),transparent 40%)}.hero-bottom{bottom:28px}.micro{font-size:.75rem}.continue{font-size:.75rem;gap:14px}.hero-grid{display:none}.section-top .micro{font-size:.75rem}.exile-grid{display:flex;flex-direction:column;align-items:stretch;padding-top:45px;gap:40px}.exile-copy{order:-1}.exile-copy h2{font-size:4.2rem}.exile-copy .poem{margin-top:28px}.field-diagram{margin:0 -3%}.field-diagram figcaption{font-size:.75rem}.mercy{padding-top:65px;min-height:820px}.mercy h2{font-size:4.75rem}.mercy-art{opacity:.24}.final-stanza{margin-top:30px}.last-line{font-size:2.1rem}footer{flex-direction:column;gap:18px;padding:28px 7%;font-size:.75rem}footer a{padding:10px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 
+
+/* Motion is opt-in through JS, with one pause state for every animated layer. */
+.particle-field,#field{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.95;mask-image:linear-gradient(90deg,transparent 20%,#000 55%)}
+#mercy-field{mask-image:radial-gradient(ellipse at center,transparent 15%,#000 68%);opacity:.8}
+.hero-content,.hero-bottom,.mercy>.eyebrow,.mercy>h2,.mercy>.poem,.mercy>.amen,.mercy-line{position:relative;z-index:1}
+.hero-bottom{position:absolute;z-index:2}
+.motion-control{position:fixed;right:24px;bottom:24px;z-index:20;padding:13px 17px;border:1px solid #c9926e66;border-radius:30px;background:#0b0d11e8;backdrop-filter:blur(12px);color:#e1d2bd;box-shadow:0 4px 30px #0005}
+.cosmic-art{transform-origin:72% 49%;will-change:transform}.mercy-art{will-change:transform}
+.orbits{transform-origin:290px 215px;opacity:.8}.orbit-particle{fill:#f1c390;stroke:none;filter:drop-shadow(0 0 4px #c9926e)}
+.escaped-orbit{stroke-dasharray:8 7;stroke-width:1.5}
+.motion-ready .cosmic-art{animation:cosmic-drift 18s ease-in-out infinite alternate}
+.motion-ready .mercy-art{animation:mercy-drift 23s ease-in-out infinite alternate}
+.motion-ready .orbits{animation:orbital-precession 38s linear infinite}
+.motion-ready .escaped-orbit{animation:flow-line 2s linear infinite}
+.motion-ready .sigil{display:inline-block;animation:orbital-precession 30s linear infinite}
+.motion-ready .motion-dot{animation:beacon 2.8s ease-in-out infinite}
+.motion-ready .down-arrow{animation:beckon 2.2s ease-in-out infinite}
+.motion-ready .mercy-line{animation:light-breath 4s ease-in-out infinite}
+.motion-ready .arrived .hero-content>.eyebrow,.motion-ready .arrived h1,.motion-ready .arrived h2,.motion-ready .arrived .poem,.motion-ready .arrived .amen{animation:poem-arrival 1.6s cubic-bezier(.16,1,.3,1) both}
+.motion-ready .arrived h1,.motion-ready .arrived h2{animation-delay:.12s}
+.motion-ready .arrived .poem{animation-delay:.3s}.motion-ready .arrived .amen{animation-delay:.5s}
+html:not([data-motion=running]) *,html:not([data-motion=running]) *:before,html:not([data-motion=running]) *:after,html[data-page-visible=false] *{animation-play-state:paused!important}
+html[data-motion=paused] .arrived h1,html[data-motion=paused] .arrived h2,html[data-motion=paused] .arrived .poem,html[data-motion=paused] .arrived .amen,html[data-motion=paused] .arrived .hero-content>.eyebrow{animation:none;opacity:1;transform:none}
+html[data-motion=paused]{scroll-behavior:auto}
+@keyframes cosmic-drift{from{transform:scale(1.04) rotate(-3deg) translate(-1%,0)}to{transform:scale(1.16) rotate(4deg) translate(1%,-2%)}}
+@keyframes mercy-drift{from{transform:rotate(177deg) scale(1.35) translate(-2%,0);opacity:.24}to{transform:rotate(185deg) scale(1.5) translate(2%,-3%);opacity:.4}}
+@keyframes orbital-precession{to{transform:rotate(360deg)}}
+@keyframes flow-line{to{stroke-dashoffset:-30}}
+@keyframes beacon{0%,100%{opacity:.55;box-shadow:0 0 3px #c9926e66}50%{opacity:1;box-shadow:0 0 13px #eebd83}}
+@keyframes beckon{0%,100%{transform:translateY(-3px)}50%{transform:translateY(7px)}}
+@keyframes light-breath{0%,100%{opacity:.45;transform:scaleY(.75)}50%{opacity:1;transform:scaleY(1.15)}}
+@keyframes poem-arrival{from{opacity:.3;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:620px){.motion-control{right:14px;bottom:14px;font-size:.75rem;padding:11px 14px}.particle-field,#field{mask-image:linear-gradient(90deg,transparent,#000 65%);opacity:.75}#mercy-field{mask-image:radial-gradient(ellipse at center,transparent 20%,#000 70%)}footer{padding-bottom:85px}.cosmic-art{transform-origin:60% 45%}}
