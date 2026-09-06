@@ -47,3 +47,14 @@ html[data-motion=paused]{scroll-behavior:auto}
 @keyframes light-breath{0%,100%{opacity:.45;transform:scaleY(.75)}50%{opacity:1;transform:scaleY(1.15)}}
 @keyframes poem-arrival{from{opacity:.3;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:620px){.motion-control{right:14px;bottom:14px;font-size:.75rem;padding:11px 14px}.particle-field,#field{mask-image:linear-gradient(90deg,transparent,#000 65%);opacity:.75}#mercy-field{mask-image:radial-gradient(ellipse at center,transparent 20%,#000 70%)}footer{padding-bottom:85px}.cosmic-art{transform-origin:60% 45%}}
+/* Artwork and accretion flow share one coordinate system and one transform. */
+.cosmic-scene{position:absolute;inset:0;z-index:-2;overflow:hidden;transform-origin:70% 50%}
+.cosmic-scene .cosmic-art{z-index:0;opacity:1;animation:none!important;transform:none!important;will-change:auto}
+#accretion{position:absolute;inset:0;width:100%;height:100%;z-index:1;opacity:0;pointer-events:none}
+#accretion.loaded{opacity:1}
+.cosmic-scene #field{z-index:2;opacity:.75;mask-image:none}
+.creation:after{z-index:-1}
+.motion-ready .cosmic-scene{animation:universe-breath 16s ease-in-out infinite alternate}
+@keyframes universe-breath{from{transform:scale(1)}to{transform:scale(1.035)}}
+@media(max-width:900px){.cosmic-scene{opacity:.92}}
+@media(max-width:620px){.cosmic-scene{opacity:.9}.cosmic-scene #field{opacity:.7}}
