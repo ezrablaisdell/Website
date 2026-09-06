@@ -1,23 +1,21 @@
 # Ezra's personal website
 
-Our first example project: a responsive personal homepage with links to GitHub.
+Live on GitHub Pages: https://ezrablaisdell.github.io/Website/
 
-## Run locally
+## Edit the website
 
-Install Node.js 22.13 or later and pnpm, then run:
+The GitHub Pages site lives in `docs/` and needs no build tools.
 
-```sh
-pnpm install
-pnpm dev
-```
+- `docs/index.html`: introduction, page title, and links.
+- `docs/styles.css`: colors, typography, and responsive layout.
+- `docs/favicon.svg`: browser icon.
 
-Open the local address printed by the development server.
+Open `docs/index.html` in a browser to preview it. Commit changes to `main` to publish them automatically.
 
-## Make it yours
+## GitHub Pages settings
 
-- Edit `app/page.tsx` to change the introduction and links.
-- Edit `app/globals.css` to change colors, typography, and layout.
-- Edit `app/layout.tsx` to change the browser title and description.
+In Settings → Pages, select **Deploy from a branch**, then **main** and **/docs**.
 
-Run `pnpm build` before publishing. Built with React, Vinext, and Sites.
+## Original React example
 
+The original React/Vinext implementation remains in `app/` for reference. GitHub Pages serves `docs/`; editing `app/` does not change the Pages site.
