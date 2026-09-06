@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+:root { color-scheme: dark; --background: #101710; --foreground: #f2f5ec; --primary: #cbf278; --primary-foreground: #101710; --muted-foreground: #adb6a7; --border: #344031; --radius: .5rem; }
+@theme inline { --color-background: var(--background); --color-foreground: var(--foreground); --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground); --color-border: var(--border); --font-sans: Arial, Helvetica, sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--background); color: var(--foreground); font-family: Arial, Helvetica, sans-serif; font-size: 1rem; }
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 3px solid var(--primary); outline-offset: 7px; }
+.site-shell { max-width: 1280px; min-height: 100svh; margin: auto; padding: 0 7%; display: flex; flex-direction: column; }
+header, footer { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+header { padding: 2.2rem 0; border-bottom: 1px solid var(--border); }
+.wordmark { font-size: 1.8rem; font-weight: 800; letter-spacing: -.12rem; }
+.wordmark span, h1 span { color: var(--primary); }
+main { padding-top: clamp(4rem, 11vh, 8rem); flex: 1; }
+.eyebrow { color: var(--primary); font-size: .9rem; margin: 0 0 2rem; }
+h1 { font-size: clamp(3.7rem, 10vw, 8.5rem); font-weight: 500; line-height: 1.02; letter-spacing: -.065em; margin: 0; }
+.intro { font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.6; color: var(--muted-foreground); max-width: 33rem; margin: 1.7rem 0 2.2rem; }
+.primary-link { display: inline-flex; align-items: center; gap: 2rem; background: var(--primary); color: var(--primary-foreground); padding: 1.05rem 1.4rem; border-radius: .3rem; font-weight: 600; }
+.primary-link:hover { background: #ddffa0; }
+.project { display: grid; grid-template-columns: 1fr 2fr auto; align-items: start; gap: 2rem; border-top: 1px solid var(--border); margin-top: clamp(4rem, 10vh, 7rem); padding: 2.2rem 0 3rem; }
+.project-number { font-size: .8rem; letter-spacing: .06em; color: var(--primary); padding-top: .45rem; }
+h2 { margin: 0 0 .7rem; font-size: 1.4rem; font-weight: 500; letter-spacing: -.03em; }
+.project p { margin: 0; color: var(--muted-foreground); line-height: 1.6; max-width: 25rem; }
+.source-link { padding-top: .45rem; text-decoration: underline; text-underline-offset: .4rem; }
+.source-link:hover, header a:hover { color: var(--primary); }
+footer { padding: 1.7rem 0; border-top: 1px solid var(--border); color: var(--muted-foreground); font-size: .85rem; }
+@media (max-width: 700px) { .site-shell { padding: 0 6%; } header { padding: 1.5rem 0; } .project { grid-template-columns: 1fr; gap: 1.25rem; } footer { flex-wrap: wrap; } h1 { overflow-wrap: anywhere; } }
+
