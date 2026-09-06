@@ -1,21 +1,24 @@
-# Ezra's personal website
+# Out of the Deep
 
-Live on GitHub Pages: https://ezrablaisdell.github.io/Website/
+A cosmic prayer in three movements: creation, exile, and mercy.
 
-## Edit the website
+Live: https://ezrablaisdell.github.io/Website/
 
-The GitHub Pages site lives in `docs/` and needs no build tools.
+## The website
 
-- `docs/index.html`: introduction, page title, and links.
-- `docs/styles.css`: colors, typography, and responsive layout.
-- `docs/favicon.svg`: browser icon.
+GitHub Pages publishes `docs/` from `main`. No build tools or external services are required.
 
-Open `docs/index.html` in a browser to preview it. Commit changes to `main` to publish them automatically.
+- `docs/index.html` — the original poem, layout, and symbolic orbital diagram.
+- `docs/styles.css` — typography, responsive layout, and artwork treatment.
+- `docs/universe.js` — a subtle particle field, with a pause control and reduced-motion support.
+- `docs/assets/creation.webp` — original generated artwork, optimized for the web.
 
-## GitHub Pages settings
+Preview by opening `docs/index.html`, or serve `docs/` with any static web server. Commit changes to `main` to publish.
 
-In Settings → Pages, select **Deploy from a branch**, then **main** and **/docs**.
+The poem is original, drawing on Genesis, Exodus, and the Psalms; it is not a biblical quotation. The diagrams and particle motion are artistic interpretations, not scientific simulations.
 
-## Original React example
+The earlier React example in `app/` is retained as a reference and is not the published site.
 
-The original React/Vinext implementation remains in `app/` for reference. GitHub Pages serves `docs/`; editing `app/` does not change the Pages site.
+## Artwork provenance
+
+Created with the built-in ImageGen tool. Prompt: Sophisticated cosmic turbulence on near-black, a dark circular void with fine luminous ivory particle streamlines; copper-orange and muted electric-blue filaments concentrated on the right. Scientific fluid visualization meets deep-space photography and etched grain. A right-centered vortex, dark left third, no text, logos, or borders.

@@ -1,2 +1,87 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Ezra Blaisdell — A place to start</title><meta name="description" content="The personal website of Ezra Blaisdell. A first project and a place for what comes next."><link rel="icon" href="./favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./styles.css"></head><body><div class="site-shell"><header><a class="wordmark" href="./" aria-label="Ezra Blaisdell home">EB<span>.</span></a><a href="https://github.com/ezrablaisdell">GitHub ↗</a></header><main><p class="eyebrow">●   A first step. Plenty more to come.</p><h1>Hi, I’m Ezra<span>.</span></h1><p class="intro">Welcome to my little corner of the internet. This is where my projects begin.</p><a class="primary-link" href="https://github.com/ezrablaisdell">Find me on GitHub <span aria-hidden="true">↗</span></a><section aria-labelledby="project-title" class="project"><div class="project-number">01 / FIRST PROJECT</div><div><h2 id="project-title">A place to start.</h2><p>My first personal website, built with a little curiosity and saved on GitHub.</p></div><a href="https://github.com/ezrablaisdell/Website" class="source-link">Explore the code ↗</a></section></main><footer><span>Ezra Blaisdell</span><span>Made one step at a time.</span></footer></div></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090b">
+  <title>Out of the Deep — A Prayer of Creation</title>
+  <meta name="description" content="An original prayer in three movements: creation, exile, and mercy. A quiet encounter with the cosmos and the God who made it.">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./universe.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#prayer">Skip to the prayer</a>
+  <header class="masthead">
+    <a class="identity" href="#beginning" aria-label="Out of the Deep, beginning"><span class="sigil" aria-hidden="true">✳</span><span>OUT OF THE DEEP</span></a>
+    <span class="masthead-note">A PRAYER OF CREATION</span>
+    <button class="motion-control" type="button" aria-pressed="false" hidden><span class="motion-dot" aria-hidden="true"></span><span class="motion-label">Pause motion</span></button>
+  </header>
+
+  <main id="prayer">
+    <section class="creation movement" id="beginning" aria-labelledby="title">
+      <div class="cosmic-art" role="img" aria-label="Copper and blue filaments of cosmic dust circling a dark, silent void."></div>
+      <canvas id="field" aria-hidden="true"></canvas>
+      <div class="hero-grid" aria-hidden="true"><span class="cross cross-one">+</span><span class="cross cross-two">+</span><span class="axis-label">THE DEEP / תְּהוֹם</span><span class="orbit-label">FORM ARISING FROM THE FORMLESS</span></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="index">I</span> CREATION</p>
+        <h1 id="title">Out of<br>the <em>deep.</em></h1>
+        <div class="poem first-stanza">
+          <p>Before the light, You knew the deep.<br>
+          You spoke, and darkness learned the dawn.<br>
+          You hung the stars upon Your breath,<br>
+          yet bent to lift the dust.</p>
+        </div>
+      </div>
+      <div class="hero-bottom"><span class="micro">FROM NOTHING, A WORLD.<br>FROM DUST, A SOUL.</span><a class="continue" href="#exile"><span>FOLLOW THE PRAYER</span><span class="down-arrow" aria-hidden="true">↓</span></a><span class="micro figure-no">FIG. 01 / THE FIRST LIGHT</span></div>
+    </section>
+
+    <section class="exile movement" id="exile" aria-labelledby="exile-title">
+      <div class="section-top"><span class="eyebrow"><span class="index">II</span> EXILE</span><span class="micro">ORDER / DISORDER</span></div>
+      <div class="exile-grid">
+        <figure class="field-diagram">
+          <svg viewBox="0 0 580 430" role="img" aria-labelledby="diagram-title diagram-desc">
+            <title id="diagram-title">An orbit interrupted</title><desc id="diagram-desc">Fine elliptical paths surround a central point; one copper trajectory breaks away. A symbolic diagram of order and wandering.</desc>
+            <defs><radialGradient id="core"><stop stop-color="#d8b994" stop-opacity=".22"/><stop offset="1" stop-color="#d8b994" stop-opacity="0"/></radialGradient></defs>
+            <circle cx="290" cy="215" r="140" fill="url(#core)"/>
+            <g class="diagram-grid" fill="none"><path d="M30 215H550M290 25V405"/><circle cx="290" cy="215" r="168" stroke-dasharray="2 7"/><path d="M45 45h12m-6-6v12M523 45h12m-6-6v12M45 385h12m-6-6v12M523 385h12m-6-6v12"/></g>
+            <g class="orbits" fill="none" stroke="currentColor">
+              <ellipse cx="290" cy="215" rx="223" ry="64" transform="rotate(-28 290 215)"/>
+              <ellipse cx="290" cy="215" rx="205" ry="91" transform="rotate(-12 290 215)"/>
+              <ellipse cx="290" cy="215" rx="186" ry="116" transform="rotate(9 290 215)"/>
+              <ellipse cx="290" cy="215" rx="165" ry="138" transform="rotate(32 290 215)"/>
+              <ellipse cx="290" cy="215" rx="137" ry="162" transform="rotate(51 290 215)"/>
+            </g>
+            <path class="escaped-orbit" d="M99 263C116 365 420 341 482 189C505 134 493 98 460 101C409 106 438 208 514 248L566 269" fill="none"/>
+            <circle cx="290" cy="215" r="4" fill="#e9dccb"/><circle cx="515" cy="249" r="4" fill="#c98c63"/>
+            <g class="diagram-label"><text x="305" y="208">ORIGIN</text><text x="440" y="289">THE WANDERING</text><text x="32" y="413">A STUDY OF SEPARATION</text></g>
+          </svg>
+          <figcaption><span>FIG. 02</span><span>THE HEAVENS KEEP THEIR COURSE.</span></figcaption>
+        </figure>
+        <div class="exile-copy">
+          <h2 id="exile-title">And we<br><em>wandered.</em></h2>
+          <div class="poem"><p>We are that dust, still bearing breath,<br>
+          still hiding east of Eden.<br>
+          The heavens keep the paths You gave;<br>
+          we lose the road to You.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mercy movement" id="mercy" aria-labelledby="mercy-title">
+      <div class="mercy-art" aria-hidden="true"></div>
+      <div class="mercy-line" aria-hidden="true"></div>
+      <p class="eyebrow"><span class="index">III</span> MERCY</p>
+      <h2 id="mercy-title">Remember<br><em>the dust.</em></h2>
+      <div class="poem final-stanza"><p>O God who heard the slaves at night,<br>
+      divide the sea within us.<br>
+      Let not the work of Your hands be lost.</p>
+      <p class="last-line">Remember us.<br>And bring us home.</p></div>
+      <span class="amen">Amen.</span>
+    </section>
+  </main>
+
+  <footer><span class="footer-title">OUT OF THE DEEP</span><span>An original prayer, after Genesis, Exodus &amp; the Psalms.</span><a href="#beginning">RETURN TO THE BEGINNING <span aria-hidden="true">↑</span></a></footer>
+</body>
+</html>
+
